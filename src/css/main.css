@@ -1,3 +1,10 @@
 body {
-    background-color: gray;
+    position: absolute;
+    left: 20px;
+    right: 30px;
+    top: 2px;
+    display: inline;
+    width: 50px;
+    font-size: 50px;
+    background-color: #fff;
 }

@@ -1,17 +1,17 @@
 @mixin burger {
     --burger-width: 28px;
-    --burger-height: 24px;
+    --burger-height: 22px;
     --burger-line-height: 3px;
 
     position: relative;
-    z-index: 5;
+    z-index: var(--z-index-3);
     display: none;
     width: var(--burger-width);
     height: var(--burger-height);
-    color: #000;
+    color: var(--neutral-color-140);
     background-color: transparent;
 
-    @include tablet {
+    @include small-tablet {
         display: block;
     }
 
@@ -22,7 +22,7 @@
         left: 0;
         width: 100%;
         height: var(--burger-line-height);
-        border-color: currentColor;
+        background-color: currentColor;
     }
 
     &::before {
@@ -48,6 +48,7 @@
         height: var(--burger-line-height);
         background-color: currentColor;
         transform: translateY(-50%);
+        transition: transform;
         transition-duration: 0.2s;
         transition-delay: 0.2s;
     }
@@ -76,8 +77,6 @@
         /*stylelint-disable-next-line selector-class-pattern*/
         .burger__line {
             transform: scale(0);
-            transition-duration: 0.1s;
-            transition-delay: 0.2s;
         }
     }
 }

@@ -1,10 +1,8 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: var(--z-index-3);
+    // z-index: var(--z-index-3);
     padding: 26px 0 22px;
+    background-color: transparent;
+
     @include mobile {
         padding: 22px 0 18px;
     }
@@ -100,6 +98,11 @@
             color: var(--neutral-color-140);
             transform: translateX(-50%);
             user-select: none;
+
+            @include small-tablet {
+                top: -28px;
+                font-size: 20px;
+            }
         }
         &-checkbox {
             appearance: none;
@@ -135,6 +138,7 @@
         padding: 0 5px;
 
         @include small-tablet {
+            font-size: 20px;
             line-height: 200%;
         }
 

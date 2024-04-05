@@ -1,5 +1,11 @@
 .overview {
     padding: 100px 0;
+    @include small-tablet {
+        padding: 86px 0 96px;
+    }
+    @include mobile {
+        padding: 66px 0 96px;
+    }
     background-color: var(--overview-bg-color);
     &__title {
         font-weight: 600;

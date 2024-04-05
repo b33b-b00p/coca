@@ -6,7 +6,7 @@
     @include mini-desktop {
         padding: 67px 0 121px;
     }
-    @include mobile {
+    @include small-tablet {
         min-height: calc(100dvh - 128px);
     }
 

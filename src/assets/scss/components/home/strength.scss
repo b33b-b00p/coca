@@ -1,5 +1,17 @@
 .strength {
+    position: relative;
     padding: 66px 0 160px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 83.4%;
+        height: 0;
+        border: 1px solid var(--neutral-color-30);
+    }
 
     @include mini-desktop {
         padding: 80px 0 96px;
@@ -33,7 +45,7 @@
         // max-width: 176px;
         font-weight: 500;
         line-height: 178%;
-        color: #7e8492;
+        color: var(--neutral-color-150);
 
         @include tablet {
             font-size: 16px;
@@ -130,7 +142,7 @@
         max-width: 421px;
         font-weight: 500;
         line-height: 178%;
-        color: #7e8492;
+        color: var(--neutral-color-150);
 
         @include small-tablet {
             max-width: 660px;

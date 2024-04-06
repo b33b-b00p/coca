@@ -1,0 +1,13 @@
+.insight {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 83.4%;
+        height: 0;
+        border: 1px solid var(--neutral-color-30);
+    }
+}

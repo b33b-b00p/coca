@@ -1,6 +1,9 @@
 .insight {
     position: relative;
     padding: 60px 0 91px;
+    @include mobile {
+        padding: 60px 0 40px;
+    }
     &::before {
         content: '';
         position: absolute;

@@ -1,0 +1,202 @@
+.testimonials {
+    padding: 69px 0 160px;
+
+    &__head {
+        @include flex-all-between;
+        margin-bottom: 48px;
+
+        @include tablet {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
+        }
+        @include small-tablet {
+            margin-bottom: 38px;
+        }
+        @include mobile {
+            margin-bottom: 28px;
+        }
+    }
+    &__title {
+        max-width: 530px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+
+        @include tablet {
+            max-width: none;
+        }
+    }
+    &__description {
+        max-width: 376px;
+        font-weight: 500;
+        line-height: 178%;
+        color: var(--neutral-color-150);
+
+        @include tablet {
+            max-width: 660px;
+        }
+    }
+
+    &__slider-wrapper {
+        display: flex;
+        user-select: none;
+
+        @include small-tablet {
+            position: relative;
+        }
+    }
+
+    &__quote-decoration {
+        max-width: 115px;
+        margin-right: 42px;
+
+        @include mini-desktop {
+            margin-right: 35px;
+        }
+        @include small-tablet {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @include mobile {
+            left: 5%;
+        }
+        & svg {
+            @include tablet {
+                max-width: 100px;
+            }
+            @include mobile {
+                max-width: 80px;
+            }
+            @include small-mobile {
+                max-width: 74px;
+            }
+        }
+    }
+
+    &__slider {
+        margin-top: 64px;
+
+        @include small-tablet {
+            margin-top: 98px;
+        }
+        @include mobile {
+            margin-top: 92px;
+        }
+    }
+    &__slide {
+        @include small-tablet {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    &__rating {
+        @include flex-all-center;
+        gap: 8px;
+        max-width: 164px;
+        &-stars {
+            @include flex-all-center;
+            gap: 8px;
+        }
+        &-star {
+            &--inactive {
+                & path {
+                    fill: #d9d9d9;
+                }
+            }
+        }
+        &-num {
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-100);
+        }
+    }
+    &__text {
+        margin: 16px 0 40px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: -0.03em;
+        color: var(--neutral-color-100);
+
+        @include small-tablet {
+            margin: 10px 0 24px;
+        }
+    }
+    &__author {
+        @include flex-align-center;
+        gap: 24px;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 14px;
+            text-align: center;
+        }
+        &-img {
+            border-radius: 50%;
+        }
+        &-name {
+            margin-bottom: 4px;
+            font-weight: 600;
+            line-height: 144%;
+            color: var(--neutral-color-100);
+        }
+        &-credentials {
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-150);
+        }
+    }
+
+    &__slider-btns {
+        display: flex;
+        gap: 16px;
+        margin-top: auto;
+        margin-left: 25px;
+
+        @include mini-desktop {
+            margin-left: 0;
+            transform: translateX(-15%);
+            z-index: 1;
+        }
+        @include small-tablet {
+            position: absolute;
+            right: 50%;
+            bottom: -20%;
+            transform: translateX(50%);
+        }
+        @include mobile {
+            bottom: -21%;
+        }
+    }
+    &__prev,
+    &__next {
+        // border?
+        //inactive; adaptive
+        // 12:35
+        border-radius: 50%;
+        padding: 16px;
+        width: 50px;
+        height: 50px;
+        border: 1px solid var(--neutral-color-100);
+        background-color: var(--neutral-color-100);
+        transition:
+            background-color var(--transition),
+            border var(--transition);
+        & path {
+            fill: var(--neutral-color-10);
+            transition: fill var(--transition);
+        }
+
+        &.swiper-button-disabled {
+            border: 1px solid #ced1d8;
+            background-color: transparent;
+            & path {
+                fill: #ced1d8;
+            }
+        }
+    }
+}

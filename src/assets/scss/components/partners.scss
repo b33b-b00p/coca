@@ -10,10 +10,10 @@
         gap: 10px;
         max-width: 1110px;
 
-        @include small-tablet {
+        @include tablet {
             flex-direction: column;
             justify-content: center;
-            gap: 60px;
+            gap: 50px;
             text-align: center;
         }
         @include mobile {
@@ -25,13 +25,13 @@
     }
     &__title {
         @include flex-column;
-        gap: 16px;
+        gap: 25px;
         max-width: 323px;
         font-weight: 500;
         line-height: 178%;
         color: var(--neutral-color-150);
 
-        @include small-tablet {
+        @include tablet {
             max-width: 660px;
         }
 
@@ -51,10 +51,9 @@
         gap: 10px 30px;
         flex-wrap: wrap;
 
-        @include small-tablet {
-            gap: 20px 34px;
-        }
-        @include small-mobile {
+        @include tablet {
+            max-width: 742px;
+            // gap: 20px 34px;
             gap: 10px;
         }
     }

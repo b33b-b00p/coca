@@ -1,0 +1,223 @@
+.footer {
+    padding: 112px 0 58px;
+    color: #fff;
+    background-color: var(--bg-color-10);
+
+    @include mini-desktop {
+        padding: 70px 0 58px;
+    }
+    @include mobile {
+        padding: 70px 0 38px;
+    }
+
+    &__head {
+        @include flex-all-between;
+        margin-bottom: 134px;
+
+        @include tablet {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            margin-bottom: 90px;
+            gap: 35px;
+        }
+        &-text {
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 120%;
+            margin-bottom: 24px;
+
+            @include tablet {
+                font-size: 60px;
+            }
+            @include mobile {
+                font-size: 48px;
+            }
+            @include small-mobile {
+                font-size: 38px;
+            }
+        }
+        &-description {
+            max-width: 514px;
+            font-weight: 500;
+            line-height: 178%;
+            color: var(--neutral-color-50);
+
+            @include tablet {
+                max-width: 660px;
+            }
+        }
+    }
+    &__button {
+        padding: 16px 32px;
+        width: 177px;
+        height: 56px;
+        color: #1d1e25;
+        background-color: #fff;
+    }
+    &__logo {
+        margin-bottom: 19px;
+        @include tablet {
+            margin-bottom: 0;
+        }
+        @include mobile {
+            transform: translateX(-7.4px);
+        }
+    }
+    &__body {
+        padding-bottom: 56px;
+        @include flex-justify-between;
+        line-height: 162%;
+        border-bottom: 2px solid var(--neutral-color-70);
+
+        @include tablet {
+            flex-direction: column-reverse;
+            gap: 50px;
+            align-items: stretch;
+        }
+
+        &-info {
+            @include tablet {
+                display: flex;
+                gap: 4px 30px;
+                align-items: center;
+                justify-content: center;
+            }
+            @include mobile {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        &-description {
+            max-width: 292px;
+            font-weight: 500;
+            color: var(--neutral-color-150);
+            @include tablet {
+                max-width: 514px;
+            }
+        }
+    }
+    &__nav {
+    }
+    &__list {
+        @include flex-all-between;
+        gap: 93px;
+
+        @include mini-desktop {
+            gap: 43px;
+        }
+        @include small-tablet {
+            justify-content: space-between;
+            gap: 0;
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 40px 60px;
+            justify-content: center;
+        }
+        @include small-mobile {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &__item {
+        @include mobile {
+            min-width: 144px;
+        }
+        @include small-mobile {
+            min-width: none;
+        }
+        &-title {
+            font-weight: 700;
+            line-height: 150%;
+            margin-bottom: 24px;
+        }
+    }
+    &__sublist {
+    }
+    &__subitem {
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        font-weight: 400;
+        line-height: 150%;
+        color: var(--neutral-color-150);
+        transition: color var(--transition);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__bottom {
+        @include flex-align-center;
+        gap: 72px;
+        padding-top: 40px;
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 10px;
+        }
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+    &__social-list {
+        @include flex-align-center;
+        gap: 24px;
+
+        @include tablet {
+            grid-column: 1 / -1;
+            justify-content: center;
+        }
+    }
+    &__social-item {
+    }
+    &__legal-list {
+        display: flex;
+        gap: 40px;
+
+        @include tablet {
+            gap: 20px;
+        }
+        @include small-mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__legal-item {
+    }
+    &__legal-link {
+        font-weight: 500;
+        line-height: 143%;
+        color: #fff;
+    }
+    &__social-link,
+    &__legal-link {
+        transition: opacity var(--transition);
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    &__copyright {
+        margin-left: auto;
+        font-weight: 500;
+        line-height: 143%;
+
+        @include small-tablet {
+            margin-left: 0;
+        }
+    }
+}

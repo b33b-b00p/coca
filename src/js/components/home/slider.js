@@ -1,13 +1,14 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 export const useInsightSlider = () => {
     new Swiper('.insight__slider', {
+        modules: [Scrollbar],
         slidesPerView: 'auto',
         spaceBetween: 32,
-        loop: true,
         simulateTouch: true,
         allowTouchMove: true,
         centeredSlides: true,
@@ -15,6 +16,10 @@ export const useInsightSlider = () => {
             993: {
                 centeredSlides: false,
             },
+        },
+        scrollbar: {
+            el: '.insight__scrollbar',
+            draggable: true,
         },
     });
 };

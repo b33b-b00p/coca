@@ -87,6 +87,7 @@
         }
     }
     &__slide {
+        background-color: var(--neutral-color-10);
         @include small-tablet {
             display: flex !important;
             flex-direction: column !important;

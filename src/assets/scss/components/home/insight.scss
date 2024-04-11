@@ -53,6 +53,15 @@
         //     height: 80px;
         //     background-color: #fff;
         // }
+        &-inner {
+            margin-bottom: 55px;
+            @include small-desktop {
+                margin-bottom: 50px;
+            }
+            @include mobile {
+                margin-bottom: 45px;
+            }
+        }
     }
     &__slide {
         max-width: 582px;
@@ -89,14 +98,5 @@
     }
     &__scrollbar .swiper-scrollbar-drag {
         background-color: var(--scrollbar-drag) !important;
-    }
-}
-.swiper-wrapper {
-    margin-bottom: 55px;
-    @include small-desktop {
-        margin-bottom: 50px;
-    }
-    @include mobile {
-        margin-bottom: 45px;
     }
 }

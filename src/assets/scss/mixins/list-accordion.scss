@@ -1,0 +1,55 @@
+@mixin list-accordion {
+    .tab-input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+    }
+    .tabs {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .tab {
+        width: 100%;
+        overflow: hidden;
+        &-label {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 0 16px;
+            cursor: pointer;
+            color: #fff;
+            /* Icon */
+            &::after {
+                content: '\276F';
+                width: 16px;
+                height: 16px;
+                text-align: center;
+                transition: all 0.2s;
+            }
+        }
+        &-content {
+            max-height: 0;
+            transition: all 0.2s;
+        }
+        &-close {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1em;
+            cursor: pointer;
+        }
+    }
+
+    // :checked
+    input:checked {
+        + .tab-label {
+            &::after {
+                transform: rotate(90deg);
+                padding-left: 1.7%;
+            }
+        }
+        ~ .tab-content {
+            max-height: 100vh;
+            padding: 0 16px 16px;
+        }
+    }
+}

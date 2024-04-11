@@ -114,30 +114,51 @@
             gap: 43px;
         }
         @include small-tablet {
-            justify-content: space-between;
-            gap: 0;
+            gap: 40px 60px;
+            flex-wrap: wrap;
+            max-width: 380px;
+            margin: 0 auto;
         }
         @include mobile {
+            gap: 25px 60px;
             flex-wrap: wrap;
-            gap: 40px 60px;
             justify-content: center;
         }
         @include small-mobile {
-            flex-direction: column;
-            text-align: center;
+            gap: 20px 60px;
         }
     }
     &__item {
-        @include mobile {
-            min-width: 144px;
+        @include small-tablet {
+            min-width: 146px;
         }
-        @include small-mobile {
+        @include mobile {
             min-width: none;
         }
         &-title {
             font-weight: 700;
             line-height: 150%;
             margin-bottom: 24px;
+            @include mobile {
+                display: none;
+                &--accordion {
+                    display: block;
+                }
+            }
+        }
+        & input,
+        & label {
+            display: none;
+        }
+        & input {
+            @include mobile {
+                display: inline-block;
+            }
+        }
+        & label {
+            @include mobile {
+                display: flex;
+            }
         }
     }
     &__sublist {
@@ -220,4 +241,7 @@
             margin-left: 0;
         }
     }
+}
+@include mobile {
+    @include list-accordion;
 }

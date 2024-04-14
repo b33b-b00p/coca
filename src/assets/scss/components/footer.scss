@@ -105,6 +105,9 @@
         }
     }
     &__nav {
+        @include mobile {
+            @include list-accordion;
+        }
     }
     &__list {
         @include flex-all-between;
@@ -241,7 +244,4 @@
             margin-left: 0;
         }
     }
-}
-@include mobile {
-    @include list-accordion;
 }

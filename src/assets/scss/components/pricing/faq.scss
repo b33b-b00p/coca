@@ -1,0 +1,105 @@
+.faq {
+    padding: 82px 0 160px;
+    &__title {
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+    &__description {
+        margin: 24px 0 80px;
+        font-weight: 500;
+        line-height: 178%;
+        color: var(--neutral-color-150);
+    }
+    &__title,
+    &__description {
+        text-align: center;
+    }
+    &__body {
+        @include list-accordion;
+    }
+    &__accordion {
+        padding-bottom: 32px;
+        border-bottom: 1px solid var(--neutral-color-30);
+
+        &:not(:last-child) {
+            margin-bottom: 56px;
+        }
+
+        &-title {
+            font-weight: 600;
+            line-height: 150%;
+            color: var(--neutral-color-100);
+
+            @include mobile {
+                max-width: 290px;
+            }
+            @include small-mobile {
+                max-width: 260px;
+            }
+        }
+        &-icon {
+            position: relative;
+            width: 24px;
+            height: 24px;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                border-radius: 6px;
+                width: 18px;
+                height: 3px;
+                background-color: var(--neutral-color-100);
+            }
+
+            &::after {
+                transform: rotate(90deg);
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                display: inline-block;
+                border-radius: 6px;
+                width: 18px;
+                height: 3px;
+                background-color: var(--neutral-color-100);
+            }
+        }
+        &-content {
+            margin-top: 16px;
+            // max-width: 687px;
+            max-width: 641px;
+            font-weight: 500;
+            line-height: 178%;
+            color: var(--neutral-color-150);
+        }
+
+        // adjusting accordion mixin
+        & .tab-label {
+            &::after {
+                display: none;
+            }
+        }
+
+        & .tab-label,
+        & .tab-content {
+            padding: 0;
+        }
+        & input:checked {
+            + .tab-label {
+                & .faq__accordion-icon {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            ~ .tab-content {
+                padding: 0;
+            }
+        }
+    }
+}

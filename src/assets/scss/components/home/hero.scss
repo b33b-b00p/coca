@@ -8,6 +8,9 @@
     @include small-tablet {
         min-height: calc(100dvh - 128px);
     }
+    @include small-mobile {
+        padding: 37px 0 121px;
+    }
 
     &__container {
         display: flex;

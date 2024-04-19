@@ -1,10 +1,149 @@
 .map {
-    padding: 90px 0 85px;
+    padding: 90px 0 38px;
+    @include mini-desktop {
+        padding: 67px 0 38px;
+    }
+    @include small-tablet {
+        padding: 67px 0 22px;
+    }
+    @include small-mobile {
+        padding: 37px 0 22px;
+    }
     &__title {
         margin-bottom: 100px;
         max-width: 741px;
         font-weight: 700;
         letter-spacing: -0.04em;
         color: var(--neutral-color-100);
+        @include mini-desktop {
+            text-align: center;
+            margin: 0 auto 100px;
+        }
+        @include mobile {
+            margin: 0 auto 50px;
+        }
+    }
+    &__content {
+        @include flex-all-between;
+        gap: 83px;
+        @include tablet {
+            gap: 83px 26px;
+        }
+        @include small-tablet {
+            flex-direction: column;
+        }
+    }
+    &__map-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 987px;
+        min-height: 545px;
+        background: url('/assets/icons/map.svg') 50% 50% / contain no-repeat;
+        @include mini-desktop {
+            background-position-x: 84%;
+            background-size: cover;
+        }
+        @include mobile {
+            background-position-x: 92%;
+        }
+    }
+    &__marker-wrapper {
+        position: absolute;
+        right: 13.3%;
+        bottom: 20.5%;
+        width: 50px;
+        height: 50px;
+        @include mobile {
+            right: 23.4%;
+            bottom: 22.5%;
+        }
+    }
+    &__marker {
+        position: relative;
+        width: inherit;
+        height: inherit;
+        background: url('/assets/icons/map-marker.svg') 50% 50% / contain
+            no-repeat;
+    }
+    &__address {
+        position: absolute;
+        right: 50%;
+        border-radius: 8px;
+        padding: 12px 16px;
+        min-width: 180px;
+        min-height: 88px;
+        box-shadow: 0 16px 24px 0 rgba(30, 30, 30, 0.0784313725);
+        background-color: #fff;
+        transform: translateX(50%);
+        visibility: hidden;
+        opacity: 0;
+        animation: show-address 400ms ease 1.5s 1 forwards;
+        &-title {
+            margin-bottom: 8px;
+            font-weight: 600;
+            line-height: 143%;
+            color: #161a34;
+        }
+        &-description {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #7e8492;
+            &::after {
+                content: url('/assets/icons/open-in-new-window.svg');
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                display: inline-block;
+            }
+        }
+    }
+    @keyframes show-address {
+        0% {
+            bottom: 60%;
+            transition:
+                bottom var(--transition),
+                visibility var(--transition),
+                opacity var(--transition);
+        }
+        100% {
+            bottom: 117%;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &__list {
+        max-width: 176px;
+        @include small-tablet {
+            max-width: none;
+            text-align: center;
+        }
+    }
+    &__item {
+        border-bottom: 1px solid var(--neutral-color-50);
+        padding-bottom: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &-title {
+            font-weight: 700;
+            line-height: 133%;
+            color: var(--neutral-color-100);
+        }
+        &-description {
+            margin: 8px 0 20px;
+            font-weight: 400;
+            line-height: 150%;
+            color: var(--neutral-color-150);
+        }
+        &-link {
+            font-weight: 500;
+            line-height: 162%;
+            text-align: center;
+            color: var(--neutral-color-100);
+        }
     }
 }

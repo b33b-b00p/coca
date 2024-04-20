@@ -10,7 +10,7 @@
         gap: 10px;
         max-width: 1110px;
 
-        @include tablet {
+        @include mini-desktop {
             flex-direction: column;
             justify-content: center;
             gap: 50px;
@@ -48,7 +48,7 @@
         gap: 10px 30px;
         flex-wrap: wrap;
 
-        @include tablet {
+        @include mini-desktop {
             max-width: 742px;
             // gap: 20px 34px;
             gap: 10px;

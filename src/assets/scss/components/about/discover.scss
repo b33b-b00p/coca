@@ -90,7 +90,8 @@
         }
         &-inner {
             // padding: 0 0 0 8.34%;
-            margin-bottom: 55px;
+            // margin-bottom: 55px;
+            cursor: grabbing;
             @include small-desktop {
                 margin-bottom: 50px;
             }

@@ -33,3 +33,29 @@ export const useDiscoverSlider = () => {
         },
     });
 };
+
+export const useTeamSlider = () => {
+    new Swiper('.team__slider', {
+        modules: [Scrollbar],
+        slidesPerView: 'auto',
+        spaceBetween: 60,
+        simulateTouch: true,
+        allowTouchMove: true,
+        centeredSlides: true,
+        breakpoints: {
+            1201: {
+                spaceBetween: 32,
+                centeredSlides: false,
+            },
+            769: {
+                spaceBetween: 32,
+                // centeredSlides: false,
+            },
+        },
+        scrollbar: {
+            el: '.team__scrollbar',
+            draggable: true,
+            hide: false,
+        },
+    });
+};

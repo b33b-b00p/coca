@@ -1,0 +1,46 @@
+.invite {
+    padding-bottom: 160px;
+    @include mini-desktop {
+        padding-bottom: 110px;
+    }
+    &__container {
+        @include flex-all-between;
+        @include mini-desktop {
+            flex-direction: column;
+            text-align: center;
+            gap: 32px;
+        }
+        @include mobile {
+            gap: 22px;
+        }
+    }
+    &__title {
+        max-width: 626px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+    &__body {
+        max-width: 506px;
+    }
+    &__title,
+    &__body {
+        @include mini-desktop {
+            max-width: 660px;
+        }
+    }
+    &__description {
+        margin-bottom: 24px;
+        font-weight: 500;
+        line-height: 178%;
+        color: var(--neutral-color-150);
+
+        @include mini-desktop {
+            margin-bottom: 40px;
+        }
+    }
+    &__link {
+        font-weight: 600;
+        color: var(--neutral-color-100);
+    }
+}

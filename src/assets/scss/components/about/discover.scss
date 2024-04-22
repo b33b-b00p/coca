@@ -20,8 +20,12 @@
     // @include small-tablet {
     //     min-height: calc(100dvh - 128px);
     // }
+
+    @include tablet {
+        padding: 67px 0 80px;
+    }
     @include small-mobile {
-        padding: 37px 0 160px;
+        padding: 37px 0 80px;
     }
     &__container {
         @include tablet {
@@ -167,6 +171,10 @@
             // line-height: 150%;
             // text-align: center;
             color: #fff;
+        }
+        &-title,
+        &-text {
+            cursor: auto;
         }
     }
 

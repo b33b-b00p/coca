@@ -1,0 +1,170 @@
+.discover {
+    padding: 87px 0 160px;
+
+    @include mini-desktop {
+        padding: 67px 0 160px;
+    }
+    // @include small-tablet {
+    //     min-height: calc(100dvh - 128px);
+    // }
+    @include small-mobile {
+        padding: 37px 0 160px;
+    }
+    &__container {
+        @include tablet {
+            // max-width: 599px;
+        }
+    }
+    &__title {
+        max-width: 959px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+
+        @include mini-desktop {
+            max-width: none;
+            text-align: center;
+        }
+    }
+    &__info {
+        margin: 118px 0 135px;
+        @include flex-all-between;
+
+        @include mini-desktop {
+            margin: 59px 0 68px;
+            flex-direction: column;
+            gap: 42px;
+            text-align: center;
+        }
+        @include tablet {
+            margin: 59px 0 38px;
+        }
+        @include mobile {
+            margin: 49px 0 8px;
+            gap: 32px;
+        }
+    }
+    &__description {
+        max-width: 738px;
+    }
+    &__contact-btn {
+        margin-right: 2.33%;
+        padding: 17px;
+        @include mini-desktop {
+            margin-right: 0;
+        }
+        & svg {
+            @include mobile {
+                width: 90px;
+                height: 90px;
+            }
+            @include small-mobile {
+                width: 85px;
+                height: 85px;
+            }
+        }
+        & path {
+            fill: var(--neutral-color-160);
+        }
+    }
+
+    &__slider-container {
+        // margin: 0 auto;
+        max-width: 1440px;
+        // max-width: calc(1440px + 8.34%);
+        // padding-left: 8.34%;
+        padding-left: 120px;
+        @include small-desktop {
+            padding: var(--container-padding);
+            max-width: calc(
+                var(--container-width) + (var(--container-padding) * 2)
+            );
+        }
+    }
+    &__slider {
+        @include small-desktop {
+            overflow: visible !important;
+        }
+        @include mini-desktop {
+            overflow: hidden !important;
+        }
+        &-inner {
+            // padding: 0 0 0 8.34%;
+            margin-bottom: 55px;
+            @include small-desktop {
+                margin-bottom: 50px;
+            }
+            @include mobile {
+                margin-bottom: 45px;
+            }
+        }
+    }
+    &__slide {
+        max-width: 502px;
+        user-select: none;
+        &--image {
+            &.swiper-slide {
+                @include tablet {
+                    &:first-child {
+                        order: 1;
+                    }
+                }
+                @include small-tablet {
+                    display: none;
+                }
+            }
+        }
+        &-img {
+        }
+        &-title {
+            margin-top: 24px;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: var(--neutral-color-100);
+
+            @include tablet {
+                margin-top: 14px;
+            }
+        }
+        &-text {
+            margin: 8px 0 32px;
+            font-weight: 500;
+            line-height: 178%;
+            color: var(--neutral-color-150);
+
+            @include tablet {
+                font-size: 16px;
+            }
+            @include small-mobile {
+                font-size: 14px;
+                margin: 4px 0 22px;
+            }
+        }
+        &-link {
+            display: inline-block;
+            // border-radius: 100px;
+            padding: 16px 32px;
+            // width: 175px;
+            // height: 56px;
+            background: #1d1e25;
+            // font-weight: 700;
+            // font-size: 16px;
+            // line-height: 150%;
+            // text-align: center;
+            color: #fff;
+        }
+    }
+
+    &__scrollbar {
+        display: none;
+        background-color: var(--scrollbar-bg) !important;
+
+        @include mini-desktop {
+            display: block;
+        }
+    }
+    &__scrollbar .swiper-scrollbar-drag {
+        background-color: var(--scrollbar-drag) !important;
+    }
+}

@@ -22,6 +22,7 @@ export const useInsightSlider = () => {
         scrollbar: {
             el: '.insight__scrollbar',
             draggable: true,
+            hide: false,
         },
     });
 };

@@ -1,0 +1,8 @@
+@import './mixins';
+@import './base/';
+@import './globals/';
+
+//components
+@import './components/header.scss';
+@import './components/about/discover.scss';
+@import './components/footer.scss';

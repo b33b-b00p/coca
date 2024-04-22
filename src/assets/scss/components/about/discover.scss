@@ -1,5 +1,18 @@
 .discover {
+    position: relative;
     padding: 87px 0 160px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 83.4%;
+        max-width: 1200px;
+        height: 0;
+        border: 1px solid var(--neutral-color-30);
+    }
 
     @include mini-desktop {
         padding: 67px 0 160px;

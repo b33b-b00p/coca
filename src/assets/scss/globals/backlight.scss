@@ -1,5 +1,7 @@
 .hero-backlight {
     position: relative;
+    margin: 0 auto;
+    max-width: 1440px;
 
     &::before,
     &::after {

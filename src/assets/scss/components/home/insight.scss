@@ -1,6 +1,12 @@
 .insight {
     position: relative;
-    padding: 60px 0 91px;
+    padding: 160px 0 91px;
+    @include mini-desktop {
+        padding: 100px 0 40px;
+    }
+    @include mobile {
+        padding: 60px 0 40px;
+    }
     @include mobile {
         padding: 60px 0 40px;
     }

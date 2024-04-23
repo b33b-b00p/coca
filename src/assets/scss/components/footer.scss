@@ -107,6 +107,23 @@
     &__nav {
         @include mobile {
             @include list-accordion;
+
+            & .tab-label,
+            & .tab-content {
+                padding: 0;
+            }
+            & input:checked {
+                + .tab-label {
+                    & .faq__accordion-icon {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+                ~ .tab-content {
+                    padding: 0;
+                }
+            }
         }
     }
     &__list {

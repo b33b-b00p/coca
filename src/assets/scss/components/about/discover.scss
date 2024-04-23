@@ -120,6 +120,9 @@
     &__slide {
         max-width: 502px;
         user-select: none;
+        @include small-tablet {
+            max-width: none;
+        }
         &--image {
             &.swiper-slide {
                 @include tablet {
@@ -133,6 +136,9 @@
             }
         }
         &-img {
+            @include small-tablet {
+                width: 100%;
+            }
         }
         &-title {
             margin-top: 24px;

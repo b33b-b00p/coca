@@ -17,6 +17,9 @@
             padding: 37px 0;
         }
 
+        &::before {
+            top: -30px;
+        }
         &::after {
             bottom: -150px;
         }

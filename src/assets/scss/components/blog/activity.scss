@@ -1,0 +1,198 @@
+.activity {
+    padding-bottom: 78px;
+    &__top {
+        padding: 90px 0 128px;
+        text-align: center;
+
+        @include mini-desktop {
+            padding: 67px 0 128px;
+        }
+        @include tablet {
+            padding: 37px 0 70px;
+        }
+        @include mobile {
+            padding: 37px 0 40px;
+        }
+
+        &::before {
+            top: -30px;
+        }
+        &::after {
+            bottom: -150px;
+        }
+    }
+    &__container {
+        text-align: left;
+    }
+    &__title {
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+    &__subtitle {
+        margin-top: 53px;
+    }
+    &__description {
+        max-width: 674px;
+    }
+
+    &__slider-container {
+        max-width: 1440px;
+        padding-left: 120px;
+        @include small-desktop {
+            padding: var(--container-padding);
+            max-width: calc(
+                var(--container-width) + (var(--container-padding) * 2)
+            );
+        }
+    }
+    &__tabs {
+        @include flex-align-center;
+        gap: 16px;
+        margin-bottom: 80px;
+
+        @include tablet {
+            justify-content: space-between;
+            gap: 0px;
+            flex-wrap: wrap;
+        }
+        @include small-tablet {
+            justify-content: flex-start;
+            margin-bottom: 60px;
+        }
+        @include mobile {
+            margin-bottom: 50px;
+            gap: 18px 0px;
+        }
+
+        &-item {
+            padding: 10px 14px;
+        }
+        &-link {
+            position: relative;
+            font-weight: 500;
+            line-height: 150%;
+            color: var(--neutral-color-150);
+            transition: color var(--transition);
+
+            &:hover,
+            &.slider-tab-controls__link--active {
+                color: var(--neutral-color-100);
+
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -2px;
+                bottom: -7px;
+                height: 1px;
+                left: 0;
+                background-color: var(--neutral-color-100);
+                opacity: 0;
+                visibility: hidden;
+                transition:
+                    opacity var(--transition),
+                    visibility var(--transition);
+
+                @include mobile {
+                    bottom: -4px;
+                }
+            }
+        }
+    }
+    &__slider {
+        @include small-desktop {
+            overflow: visible !important;
+        }
+        @include mini-desktop {
+            overflow: hidden !important;
+        }
+        &-inner {
+            cursor: grabbing;
+            @include small-desktop {
+                margin-bottom: 50px;
+            }
+            @include mobile {
+                margin-bottom: 45px;
+            }
+        }
+    }
+    &__slide {
+        max-width: 515px;
+        user-select: none;
+        @include tablet {
+            max-width: 580px;
+        }
+        &-img {
+            height: 428px;
+            @include tablet {
+                width: 100%;
+                object-position: 50% 30%;
+            }
+            @include small-tablet {
+                height: 328px;
+            }
+            @include mobile {
+                height: 200px;
+            }
+        }
+        &-meta {
+            @include flex-all-between;
+            margin-top: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            color: var(--neutral-color-150);
+
+            @include small-mobile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        &-title {
+            margin: 24px 0 16px;
+            font-weight: 700;
+            line-height: 125%;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+            @include mobile {
+                margin: 16px 0 8px;
+            }
+        }
+        &-description {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: var(--neutral-color-150);
+            @include small-tablet {
+                font-size: 18px;
+            }
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+        &-title,
+        &-description {
+            max-width: 458px;
+            @include tablet {
+                max-width: 696px;
+            }
+        }
+    }
+
+    &__scrollbar {
+        display: none;
+        background-color: var(--scrollbar-bg) !important;
+
+        @include mini-desktop {
+            display: block;
+        }
+    }
+    &__scrollbar .swiper-scrollbar-drag {
+        background-color: var(--scrollbar-drag) !important;
+    }
+}

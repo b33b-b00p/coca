@@ -18,7 +18,10 @@
             top: -30px;
         }
         &::after {
-            bottom: -150px;
+            bottom: -350px;
+            @include mini-desktop {
+                bottom: -150px;
+            }
         }
     }
     &__container {

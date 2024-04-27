@@ -1,7 +1,8 @@
 import Swiper from 'swiper';
-import { Scrollbar } from 'swiper/modules';
+import { Scrollbar, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
 
 export const useActivitySlider = () => {
     new Swiper('.activity__slider', {
@@ -78,4 +79,34 @@ export const useActivityTabs = () => {
         }
         tabControl.classList.add('slider-tab-controls__link--active');
     }
+};
+
+export const useArticlesSlider = () => {
+    new Swiper('.articles__slider', {
+        modules: [Navigation],
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+        spaceBetween: 42,
+        simulateTouch: true,
+        allowTouchMove: true,
+        centeredSlides: true,
+        breakpoints: {
+            1201: {
+                slidesPerView: 'auto',
+                slidesPerGroup: 2,
+                centeredSlides: false,
+                spaceBetween: 32,
+            },
+            993: {
+                // slidesPerView: 2,
+                // slidesPerGroup: 2,
+                // centeredSlides: false,
+                spaceBetween: 22,
+            },
+        },
+        navigation: {
+            prevEl: '.articles__prev',
+            nextEl: '.articles__next',
+        },
+    });
 };

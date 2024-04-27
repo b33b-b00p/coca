@@ -10,5 +10,8 @@ useActivityTabs();
 import { useActivitySlider } from './components/blog/slider.js';
 useActivitySlider();
 
+import { useArticlesSlider } from './components/blog/slider.js';
+useArticlesSlider();
+
 import { useBurger } from './components/burger.js';
 useBurger();

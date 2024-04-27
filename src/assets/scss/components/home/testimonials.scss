@@ -195,15 +195,23 @@
         background-color: var(--neutral-color-100);
         transition:
             background-color var(--transition),
-            border var(--transition);
+            border var(--transition),
+            opacity var(--transition);
         & path {
             fill: var(--neutral-color-10);
             transition: fill var(--transition);
         }
 
+        &:hover {
+            opacity: 0.8;
+        }
         &.swiper-button-disabled {
             border: 1px solid #ced1d8;
             background-color: transparent;
+            &:hover {
+                opacity: 1;
+            }
+
             & path {
                 fill: #ced1d8;
             }

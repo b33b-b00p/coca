@@ -20,6 +20,10 @@ export default defineConfig({
                 blog: './src/blog.html',
                 pricing: './src/pricing.html',
                 contact: './src/contact.html',
+                howWePerformLongRunningTasksUsingAWSservices:
+                    './src/posts/how-we-perform-long-running-tasks-using-aws-services.html',
+                HowToAskWhenDoingUserResearch:
+                    './src/posts/how-we-perform-long-running-tasks-using-aws-services.html',
             },
         },
     },

@@ -1,0 +1,96 @@
+.post-body {
+    padding: 80px 0 56px;
+    @include mini-desktop {
+        padding: 67px 0 56px;
+    }
+    @include small-tablet {
+        padding: 67px 0 22px;
+    }
+    @include small-mobile {
+        padding: 37px 0 22px;
+    }
+    &__container {
+        max-width: calc(940px + (var(--container-padding) * 2));
+    }
+    &__title {
+        margin-bottom: 80px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+
+        @include mini-desktop {
+            margin: 0 auto 80px;
+        }
+        @include mobile {
+            margin: 0 auto 50px;
+        }
+    }
+    &__data {
+        @include flex-all-between;
+        gap: 15px;
+
+        font-weight: 500;
+        color: var(--neutral-color-150);
+        &-info {
+            line-height: 150%;
+        }
+    }
+    &__author {
+        @include flex-align-center;
+        gap: 24px;
+
+        @include mobile {
+            display: none;
+        }
+
+        &-img {
+            border-radius: 50%;
+            max-width: 56px;
+            max-height: 56px;
+            object-position: 50% 0%;
+        }
+        &-name {
+            margin-bottom: 4px;
+            font-weight: 600;
+            line-height: 144%;
+            color: var(--neutral-color-100);
+        }
+        &-credentials {
+            line-height: 162%;
+        }
+    }
+    &__img {
+        margin: 24px 0 80px;
+        width: 100%;
+        max-height: 545px;
+        object-position: 50% 30%;
+
+        @include mini-desktop {
+            max-height: 480px;
+            margin: 24px 0 50px;
+        }
+        @include tablet {
+            max-height: 450px;
+            // margin: 24px 0 50px;
+        }
+        @include small-tablet {
+            max-height: 400px;
+        }
+        @include mobile {
+            margin: 24px 0 30px;
+            max-height: 270px;
+            // max-height: 320px;
+        }
+    }
+    &__paragraph {
+        font-weight: 400;
+        line-height: 178%;
+        color: var(--neutral-color-100);
+
+        &-title {
+            margin: 56px 0 24px;
+            font-weight: 600;
+            color: var(--neutral-color-100);
+        }
+    }
+}

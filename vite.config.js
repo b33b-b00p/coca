@@ -25,6 +25,9 @@ export default defineConfig({
                 HowToAskWhenDoingUserResearch:
                     './src/posts/how-to-ask-when-doing-user-research.html',
             },
+            output: {
+                assetFileNames: '[name].[ext]',
+            },
         },
     },
     plugins: [

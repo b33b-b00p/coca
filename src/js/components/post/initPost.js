@@ -40,7 +40,7 @@ export const initPost = () => {
 const postArray = [
     {
         title: 'How we perform long-running tasks using AWS services',
-        imgSrc: '/coca/assets/images/dashboard/1.jpg',
+        imgSrc: '/coca/ipad-on-a-desk.jpg',
         paragraphOne:
             'Depending on the input, this can result in using a lot of processing power and time. The whole process would take approximately 5 seconds to return a result to the client. Keep in mind we’re talking about 1 item, a contact from a contact book. After a while, a new requirement is added. Solution must support companies that manage their contacts organized in files. We agreed to develop a web application that would support upload of dataset files, like .csv. The new web application should support third party integrations. Some of them are the ESP/CRM services, like Mailchimp. User does not need to see the result immediately. System can later notify the user about the result, when the process finishes. This information is the key that we need to leverage on when developing our solution. So here’s how we did it.',
         paragraphTitle: 'Initial approach',
@@ -52,13 +52,13 @@ const postArray = [
 
         authorName: 'Arlyne Stefano',
         authorCredentials: 'Founder & CEO',
-        authorImgSrc: '/coca/assets/images/team/arlyne-stefano.jpg',
+        authorImgSrc: '/coca/arlyne-stefano.jpg',
         authorDescription:
             'Skilled in React Native, iOS and backend, Toni has a demonstrated knowledge of the information technology and services industry, with plenty of hands-on experience to back it up.',
     },
     {
         title: 'How to ask when doing User Research',
-        imgSrc: '/coca/assets/images/dashboard/2.jpg',
+        imgSrc: '/coca/workspace.jpg',
         paragraphOne:
             'Depending on the input, this can result in using a lot of processing power and time. The whole process would take approximately 5 seconds to return a result to the client. Keep in mind we’re talking about 1 item, a contact from a contact book. After a while, a new requirement is added. Solution must support companies that manage their contacts organized in files. We agreed to develop a web application that would support upload of dataset files, like .csv. The new web application should support third party integrations. Some of them are the ESP/CRM services, like Mailchimp. User does not need to see the result immediately. System can later notify the user about the result, when the process finishes. This information is the key that we need to leverage on when developing our solution. So here’s how we did it.',
         paragraphTitle: 'Initial approach',
@@ -70,7 +70,7 @@ const postArray = [
 
         authorName: 'Katy-Cristy',
         authorCredentials: 'Chief Technology Officer',
-        authorImgSrc: '/coca/assets/images/team/katy-cristy.jpg',
+        authorImgSrc: '/coca/katy-cristy.jpg',
         authorDescription:
             'Skilled in React Native, iOS and backend, Toni has a demonstrated knowledge of the information technology and services industry, with plenty of hands-on experience to back it up.',
     },

@@ -23,7 +23,7 @@ export default defineConfig({
                 howWePerformLongRunningTasksUsingAWSservices:
                     './src/posts/how-we-perform-long-running-tasks-using-aws-services.html',
                 HowToAskWhenDoingUserResearch:
-                    './src/posts/how-we-perform-long-running-tasks-using-aws-services.html',
+                    './src/posts/how-to-ask-when-doing-user-research.html',
             },
         },
     },

@@ -10,5 +10,8 @@ usePartnersSlider();
 import { phoneMask } from './components/contact/phone.js';
 phoneMask();
 
+import { showAddress } from './components/contact/addressPopUp.js';
+showAddress();
+
 import { useBurger } from './components/burger.js';
 useBurger();

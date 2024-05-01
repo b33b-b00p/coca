@@ -147,6 +147,9 @@
         }
         &-img {
             border-radius: 50%;
+            max-width: 56px;
+            max-height: 56px;
+            object-position: 50% 0%;
         }
         &-name {
             margin-bottom: 4px;

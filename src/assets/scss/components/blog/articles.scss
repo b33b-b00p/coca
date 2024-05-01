@@ -124,15 +124,36 @@
         &-img {
             // height: 428px;
             width: 100%;
-            @include tablet {
-                max-height: 558px;
+            &--long {
+                min-height: 600px;
+                max-height: 600px;
+                @include mini-desktop {
+                    min-height: unset;
+                    max-height: unset;
+                }
+            }
+            &--short {
+                min-height: 400px;
+                max-height: 400px;
+                @include mini-desktop {
+                    min-height: unset;
+                    max-height: unset;
+                }
+            }
+            @include small-desktop {
                 object-position: 50% 30%;
             }
+            @include mini-desktop {
+                height: 358px;
+            }
+            @include tablet {
+                height: 558px;
+            }
             @include mobile {
-                max-height: 358px;
+                height: 358px;
             }
             @include small-mobile {
-                max-height: 308px;
+                height: 308px;
             }
         }
         &-title {

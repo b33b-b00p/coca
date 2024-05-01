@@ -7,9 +7,7 @@ export const initLinks = () => {
         '[share-post="Copy-clipboard"]',
     );
 
-    const postTitle = encodeURI(
-        document.querySelector('[post-title]').textContent,
-    );
+    const postTitle = document.querySelector('[post-title]').textContent;
     const postUrl = encodeURI(document.location.href);
 
     facebookBtn.setAttribute(
